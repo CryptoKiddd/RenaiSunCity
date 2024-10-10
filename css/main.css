@@ -72,13 +72,15 @@ table {
 }
 a{
     text-decoration: none;
+    color: inherit;
 }
   
   
 .navigation{
     display: flex;
+    margin-left: 78px;
     justify-content: space-between;
-    width: 100%;
+    width: 75%;
 }
 .logo{
     width: 202px;
@@ -88,10 +90,79 @@ a{
     justify-content: center;
     background: var(--primary-color);
 }
+nav{
+    display: flex;
+    flex-direction: column;
+    padding-left: 112px;
+    margin-right: 98px;
+}
+.nav img{
+    width: 20px;
+    height: 20px;
+}
 .nav-socials,.nav-links{
     display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 32px;
+
 }
-.navigation aside{
-    width: 25%;
+.nav-socials{
+    justify-content: flex-end;
+
+}
+.nav-links{
+    border-top: 1px solid #DDDDDD;
+}
+.nav-links li {
+    position: relative;
+    text-align: center;
+}
+.nav-links li::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    z-index: 2;
+    height: 16px;
+    background: var(--secondary-color);
+    top: 50%;
+    transform: translateY(-50%);
+    left: -20px;
+    transition: 350ms;
+    z-index: -1;
+}
+.nav-links li:hover::before{
+    width:calc(100% + 25px);
+    height: 100%;
+}
+.nav-phone{
+    display: flex;
+    transition: 250ms ease;
+    gap: 10px;
+}
+.nav-phone::before{
+    display: none;
+}
+.nav-phone:hover{
     background-color: var(--secondary-color);
+}
+.nav-phone img{
+    width: 18px;
+}
+.hero-side-nav{
+    width: 25%;
+    padding-top: 112px;
+    padding-left: 33px;
+    position: absolute;
+    height: 1600px;
+    top: 0;
+    right: 0;
+    background-color: var(--secondary-color);
+}
+.hero-side-nav button{
+    padding: 7px 20px;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+
 }
