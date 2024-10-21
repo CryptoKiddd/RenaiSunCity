@@ -411,7 +411,10 @@ display: none;
   right: 0;
   background-color: var(--secondary-color);
 }
-
+.inner-hero-side-nav{
+  height: 100px;
+  background: none;
+}
 .hero-side-nav div {
   padding: 7px 20px;
   height: 40px;
@@ -1269,6 +1272,7 @@ footer {
   background: white;
   border-radius: 25px;
   border: none;
+  cursor: pointer;
 
 }
 

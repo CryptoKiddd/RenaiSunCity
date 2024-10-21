@@ -1,11 +1,12 @@
-
-///main page carousel
+/////////////
+///MAIN PAGE SLIDER
+////////////////
 var owl = $('#hero-carousel');
 owl.owlCarousel({
     loop: true,
     margin: 10,
-    dots: false, // Ensure default dots are disabled
-    nav: false, // Disable default navigation
+    dots: false, 
+    nav: false, 
     responsive: {
         0: { items: 1 },
     }
@@ -22,18 +23,18 @@ $('.custom-next').click(function() {
 
 // Custom Dot Click Event
 $('.dot').click(function() {
-    var index = $(this).data('dot');  // Get the custom dot's index
+    var index = $(this).data('dot');  
     owl.trigger('to.owl.carousel', [index, 300]); // Navigate to the corresponding slide
 });
 
 // Update Active Dot on Carousel Change
 owl.on('changed.owl.carousel', function(event) {
-    var currentIndex = event.item.index;  // Get current active item index
+    var currentIndex = event.item.index;  // 
 
-    // If loop is enabled, adjust the index to avoid clone conflicts
+    
     currentIndex = currentIndex - event.relatedTarget._clones.length / 2;
 
-    // Handle out-of-bounds cases
+
     if (currentIndex >= event.item.count) {
       currentIndex = 0;
     }
@@ -51,13 +52,15 @@ owl.on('changed.owl.carousel', function(event) {
 // Initialize first active dot
 $('.dot[data-dot="0"]').addClass('active-dot');
 
-//set height of hero section to 100vh - navigation height to fit the 100vh screen
+//set height of hero section to 100vh - navigation height to fit the 100vh screen,  and the same for projects inner page
 const $navigation = $(".header");  
 const $heroSection = $(".hero"); 
+
 
 const navHeight = $navigation.outerHeight(); 
 
 $heroSection.css("height", `calc(100vh - ${navHeight}px)`);
+
 
 //scroldownd icon click to move to next section
 
