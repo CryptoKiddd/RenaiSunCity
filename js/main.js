@@ -73,4 +73,39 @@ $('#scrolldown').on('click', function(){
 
 
 
-  
+//navigation workaround to animate transition
+
+
+
+
+let scrollTrigger = 190;
+let lastScrollTop = 0;
+let lastScrollTime = 0;
+let scrollSpeedThreshold = 100; // Set a scroll speed threshold (pixels/ms)
+
+$(window).scroll(function () {
+  let scrollTop = $(this).scrollTop();
+  let currentTime = new Date().getTime();
+  let scrollSpeed = Math.abs(scrollTop - lastScrollTop) / (currentTime - lastScrollTime); // Calculate scroll speed
+
+  lastScrollTop = scrollTop;
+  lastScrollTime = currentTime;
+
+  // Check if user scrolls fast (higher than the threshold)
+  if (scrollSpeed > scrollSpeedThreshold) {
+    // Disable transitions by adding the class 'no-transition'
+    $('.navigation, .nav-scroll').addClass('no-transition');
+  } else {
+    // Enable transitions by removing the class 'no-transition'
+    $('.navigation, .nav-scroll').removeClass('no-transition');
+  }
+
+  // Toggle navigation based on scroll position
+  if (scrollTop > scrollTrigger) {
+    $('.navigation').first().addClass('hidden');
+    $('.nav-scroll').addClass('visible');
+  } else {
+    $('.navigation').first().removeClass('hidden');
+    $('.nav-scroll').removeClass('visible');
+  }
+});

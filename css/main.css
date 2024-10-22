@@ -123,6 +123,9 @@ section {
 .romove-border {
   border: none;
 }
+.no-transition {
+  transition: none !important;
+}
 
 a:hover {
   cursor: pointer;
@@ -398,6 +401,49 @@ display: none;
 .nav-phone img {
   width: 18px;
 }
+/* Default navigation styles */
+
+/* Smooth transitions for social links and phone number */
+.nav-socials, .nav-phone {
+  transition: opacity 0.3s ease;
+}
+.nav-scroll {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-left: 132px;
+  padding-right: 160px;
+  margin-left: 0;
+  align-items: center;
+  z-index: 1000;
+  
+  /* height: 110px; */
+  opacity: 0;
+  /* transition: opacity 100ms ease, height 350ms ease-in; */
+  background: var(--primary-color);
+
+}
+.nav-scroll a{
+  pointer-events: none;
+}
+ .nav-scroll .logo{
+  height: 78px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 98px;
+ }
+
+.nav-scroll nav{
+  flex-direction: row;
+  margin-right: 0;
+  border: none;
+  color: white;
+}
+.nav-scroll .nav-links{
+  border: none;
+ 
+}
 
 .hero-side-nav {
   width: 25%;
@@ -409,6 +455,7 @@ display: none;
   height: 1710px;
   top: 0;
   right: 0;
+  z-index: 1;
   background-color: var(--secondary-color);
 }
 .inner-hero-side-nav{
@@ -630,6 +677,7 @@ display: none;
 
 .side-nav {
   position: absolute;
+  z-index: 10001;
   display: flex;
   flex-direction: column-reverse;
   gap: 100px;
@@ -643,11 +691,12 @@ display: none;
 
 }
 
+
 .side-nav span {
   display: inline-block;
-  /* Ensure transform works on inline elements */
+  
   transform: rotate(-90deg);
-  /* Rotate the text 90 degrees clockwise */
+  z-index: 10001;
   transform-origin: center;
  font-family:'roboto';
 
