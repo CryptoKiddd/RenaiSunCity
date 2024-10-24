@@ -70,42 +70,30 @@ $('#scrolldown').on('click', function(){
     },1000)
 })
 
+const mainPageForm = $('#mainpage-form')
+const projLayoutCol = $('.project-layout-col')
+const projLayoutColWidth = projLayoutCol.outerWidth(true)
+console.log(projLayoutColWidth)
+
+mainPageForm.css("width", `calc(100% - ${projLayoutColWidth}px - 2px )`  )
+
 
 
 
 //navigation workaround to animate transition
 
+$(window).on('scroll', function() {
+  const scrolled = $(window).scrollTop();
+  const navOnScroll = $('.nav-scroll');
+  const scrollTrigger = 200; // Set your scroll trigger value (adjust as needed)
 
-
-
-let scrollTrigger = 190;
-let lastScrollTop = 0;
-let lastScrollTime = 0;
-let scrollSpeedThreshold = 100; // Set a scroll speed threshold (pixels/ms)
-
-$(window).scroll(function () {
-  let scrollTop = $(this).scrollTop();
-  let currentTime = new Date().getTime();
-  let scrollSpeed = Math.abs(scrollTop - lastScrollTop) / (currentTime - lastScrollTime); // Calculate scroll speed
-
-  lastScrollTop = scrollTop;
-  lastScrollTime = currentTime;
-
-  // Check if user scrolls fast (higher than the threshold)
-  if (scrollSpeed > scrollSpeedThreshold) {
-    // Disable transitions by adding the class 'no-transition'
-    $('.navigation, .nav-scroll').addClass('no-transition');
+  if (scrolled > scrollTrigger) {
+      navOnScroll.css('transform', 'translateY(0px)'); // Corrected syntax
   } else {
-    // Enable transitions by removing the class 'no-transition'
-    $('.navigation, .nav-scroll').removeClass('no-transition');
-  }
-
-  // Toggle navigation based on scroll position
-  if (scrollTop > scrollTrigger) {
-    $('.navigation').first().addClass('hidden');
-    $('.nav-scroll').addClass('visible');
-  } else {
-    $('.navigation').first().removeClass('hidden');
-    $('.nav-scroll').removeClass('visible');
+      navOnScroll.css('transform', 'translateY(-100px)'); // Example for hiding the nav when not scrolled
   }
 });
+
+
+
+  
