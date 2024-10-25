@@ -80,20 +80,29 @@ mainPageForm.css("width", `calc(100% - ${projLayoutColWidth}px - 2px )`  )
 
 
 
-//navigation workaround to animate transition
-
+//navigation on scroll
 $(window).on('scroll', function() {
   const scrolled = $(window).scrollTop();
   const navOnScroll = $('.nav-scroll');
-  const scrollTrigger = 200; // Set your scroll trigger value (adjust as needed)
+  const scrollTrigger = 200; // Set your scroll trigger value 
 
   if (scrolled > scrollTrigger) {
-      navOnScroll.css('transform', 'translateY(0px)'); // Corrected syntax
+      navOnScroll.css('transform', 'translateY(0px)'); 
   } else {
-      navOnScroll.css('transform', 'translateY(-100px)'); // Example for hiding the nav when not scrolled
+      navOnScroll.css('transform', 'translateY(-100%)'); 
   }
 });
+//active lang
 
+$('.nav-lang a').on('click', function(event) {
+  // Prevent the default link behavior
+  event.preventDefault();
 
+  // Remove the 'active' class from all <a> elements
+  $('.nav-lang a').removeClass('active');
+
+  // Add the 'active' class to the clicked <a> element
+  $(this).addClass('active');
+});
 
   
