@@ -67,9 +67,9 @@
       </ul>
       <ul class="nav-links">
         <li><a href="templates/projects.html">პროექტები</a></li>
-        <li><a href="/about">შესახებ</a></li>
-        <li><a href="/services">ბლოგი</a></li>
-        <li><a href="/contact">სიახლეები</a></li>
+        <li><a href="">შესახებ</a></li>
+        <li><a href="templates/blog.html">ბლოგი</a></li>
+        <li><a href="templates/news.html">სიახლეები</a></li>
         <li><a href="/contact">კონტაქტი</a></li>
         <li class="nav-phone"> <img src="assets/phone.svg" alt=""><a href="tel:+995596602602">+995 596 60 26 02</a>
         </li>
@@ -426,6 +426,58 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"> </script> <!-- jQuery Library -->
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
+<script>
+  let owl = $('#hero-carousel');
+owl.owlCarousel({
+    loop: true,
+    margin: 10,
+    dots: false, 
+    nav: false, 
+    responsive: {
+        0: { items: 1 },
+    }
+});
+
+// Custom Navigation Buttons
+$('.custom-prev').click(function() {
+    owl.trigger('prev.owl.carousel');
+});
+
+$('.custom-next').click(function() {
+    owl.trigger('next.owl.carousel');
+});
+
+// Custom Dot Click Event
+$('.dot').click(function() {
+    var index = $(this).data('dot');  
+    owl.trigger('to.owl.carousel', [index, 300]); // Navigate to the corresponding slide
+});
+
+// Update Active Dot on Carousel Change
+owl.on('changed.owl.carousel', function(event) {
+    var currentIndex = event.item.index;  // 
+
+    
+    currentIndex = currentIndex - event.relatedTarget._clones.length / 2;
+
+
+    if (currentIndex >= event.item.count) {
+      currentIndex = 0;
+    }
+    if (currentIndex < 0) {
+      currentIndex = event.item.count - 1;
+    }
+
+    // Remove active class from all dots
+    $('.dot').removeClass('active-dot');
+
+    // Add active class to the correct dot based on the currentIndex
+    $('.dot[data-dot="' + currentIndex + '"]').addClass('active-dot');
+});
+
+// Initialize first active dot
+$('.dot[data-dot="0"]').addClass('active-dot');
+</script>
 
 
 </html>
