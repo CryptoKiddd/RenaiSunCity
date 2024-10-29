@@ -477,6 +477,13 @@ owl.on('changed.owl.carousel', function(event) {
 
 // Initialize first active dot
 $('.dot[data-dot="0"]').addClass('active-dot');
+
+//scrolldown icon
+$('#scrolldown').on('click', function(){
+    $('html,body').animate({
+        scrollTop:$('.projects').offset().top
+    },1000)
+})
 </script>
 
 

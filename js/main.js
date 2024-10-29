@@ -20,6 +20,11 @@ $('#scrolldown').on('click', function(){
         scrollTop:$('.projects').offset().top
     },1000)
 })
+$('#scrolldown').on('click', function(){
+    $('html,body').animate({
+        scrollTop:$('.advantages').offset().top
+    },1000)
+})
 
 const mainPageForm = $('#mainpage-form')
 const projLayoutCol = $('.project-layout-col')
@@ -43,9 +48,15 @@ $(window).on('scroll', function() {
   const scrollTrigger = 200; // Set your scroll trigger value 
 
   if (scrolled > scrollTrigger) {
-      navOnScroll.css('transform', 'translateY(0px)'); 
+      navOnScroll.css({
+          'transform': 'translateY(0px)',
+          'pointer-events': 'enable' // Enable pointer events when visible
+      });
   } else {
-      navOnScroll.css('transform', 'translateY(-100%)'); 
+      navOnScroll.css({
+          'transform': 'translateY(-100%)',
+          'pointer-events': 'none' // Disable pointer events when hidden
+      });
   }
 });
 //active lang
