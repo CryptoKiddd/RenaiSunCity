@@ -1642,3 +1642,151 @@ Medium desktop device  untill 1440px
 }
  
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+contact inner page
+
+*/
+
+
+.contact-box-bottom{
+  height: 160px;
+  padding: 10px;
+  padding-left: 80px;
+  font-family: 'roboto';
+  color: white;
+}
+.contact-box-bottom header h3{
+ font-size: 26px;
+ font-family: 'roboto';
+ color: var(--secondary-color);
+}
+.contact-box-bottom header span{
+margin-left: 5px;
+}
+.contact-box-bottom ul{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+padding-left: 0;
+gap: 5px;
+margin-top: 10px;
+}
+.contact-box-bottom ul li a{
+display: flex;
+gap: 15px;
+align-items: center;
+}
+.contact-box-bottom ul li a img{
+width: 24px;
+height: 24px;
+}
+.project-top img{
+  height: 100%;
+}
+.contact-hero-side-nav{
+  height: 812px;
+}
+.contact-inner-form{
+  width: 678px;
+}
+
+/* 
+
+about us page
+
+*/
+
+/*
+carousel navigation
+*/
+.about-us{
+  position: relative;
+  width: 100%;
+}
+#about-us-carousel{
+  height: 552px;
+}
+#about-us-carousel .owl-stage{
+  height: 552px;
+}
+#about-us-carousel .owl-stage .owl-item{
+  height: 100%;
+}
+#about-us-carousel .owl-stage .owl-item img{
+  height: 552px;
+}
+#about-us-carousel .carousel-container .item{
+  height: 552px;
+}
+
+.about-prev
+{
+  position: absolute;
+  left: 150px;
+top: 226px;
+  width: 50px;
+  height: 50px;
+}
+.about-next{
+  position: absolute;
+  top: 226px;
+
+  right: 50px;
+  z-index: 5;
+  width: 50px;
+  height: 50px;
+}
+.carousel-progress {
+  margin-left: 280px;
+  width:calc(100% - 420px);
+  height: 2px;
+  background-color: #DDDDDD;
+  border-radius: 20px;
+  margin-top: 40px;
+  position: relative;
+}
+
+.carousel-progress-bar {
+  width: 0%;
+  height: 100%;
+  background-color: var(--secondary-color); /* Customize color as desired */
+  transition: width 0.3s ease; /* Smooth transition */
+}
+
+.about-us article{
+  position: relative;
+  margin-top: 90px;
+  margin-left: 460px;
+  gap: 20px;
+  max-width: 881px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-family: 'roboto';
+}
+.about-us article::before{
+  content: '';
+  position: absolute;
+  width: 122px;
+  left: -180px;
+  top: 0;
+  height: 100%;
+  background-color: var(--secondary-color);
+}
+.ct-from{
+  width: 675px;
+}
