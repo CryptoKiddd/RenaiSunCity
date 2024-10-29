@@ -203,9 +203,12 @@ section {
   width: 38px;
   height: 38px;
   background-color: #FDCD00;
+  transition: 350ms ease;
   cursor: pointer;
 }
-
+.yellow-bg:hover{
+  background: var(--primary-color);
+}
 
 .navigation {
   display: flex;
@@ -1065,9 +1068,7 @@ iframe {
   flex-direction: column;
   align-items: center;
 }
-.news-inner{
 
-}
 .news-inner main:first-of-type  {
   padding-top: 100px;
 }
@@ -1390,13 +1391,7 @@ form .phone-input input {
 }
 
 
-.fb:hover,
-.insta:hover,
-.youtube:hover,
-.linkedin:hover,
-.tiktok:hover {
-  background-color: var(--primary-color);
-}
+
 
 
 
@@ -1463,6 +1458,7 @@ footer {
 }
 
 .footer-btns div {
+  font-family: 'roboto';
   width: 217px;
   display: flex;
   align-items: center;
