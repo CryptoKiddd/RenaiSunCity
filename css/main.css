@@ -1768,7 +1768,7 @@ top: 226px;
 
 .about-us article{
   position: relative;
-  margin-top: 90px;
+  margin-top: 40px;
   margin-left: 460px;
   gap: 20px;
   max-width: 881px;
@@ -1787,6 +1787,41 @@ top: 226px;
   height: 100%;
   background-color: var(--secondary-color);
 }
+.about-us header{
+  margin-top: 114px;
+  display: flex;
+  gap: 65px;
+  margin-left: 280px;
+
+}
+.about-us header h2{
+ font-family: 'roboto-bold';
+  max-width: 732px;
+  width: 100%;
+
+}
+.about-us header h4{
+  font-size: 20px;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  font-family: 'roboto-bold';
+ width: 122px;
+ height: 49px;
+ background: var(--secondary-color);
+}
 .ct-from{
   width: 675px;
+}
+.about-hero-side-nav{
+  height: 749px;
+}
+.contact-hero-side-nav{
+  height: 812px;
+}
+.about-us .blog-header{
+  margin-left: 460px;
+}
+.about-contacts{
+  padding-top: 100px;
 }
