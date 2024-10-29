@@ -15,16 +15,8 @@ $heroSection.css("height", `calc(100vh - ${navHeight}px)`);
 
 //scroldownd icon click to move to next section
 
-$('#scrolldown').on('click', function(){
-    $('html,body').animate({
-        scrollTop:$('.projects').offset().top
-    },1000)
-})
-$('#scrolldown').on('click', function(){
-    $('html,body').animate({
-        scrollTop:$('.advantages').offset().top
-    },1000)
-})
+
+
 
 const mainPageForm = $('#mainpage-form')
 const projLayoutCol = $('.project-layout-col')
