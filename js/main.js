@@ -18,16 +18,6 @@ $heroSection.css("height", `calc(100vh - ${navHeight}px)`);
 
 
 
-const mainPageForm = $('#mainpage-form')
-const projLayoutCol = $('.project-layout-col')
-const projLayoutColWidth = projLayoutCol.outerWidth(true)
-console.log(projLayoutColWidth)
-
-if (projLayoutColWidth > 950) {
-  mainPageForm.css("width", `calc(100% - ${projLayoutColWidth}px + 132px)`);
-} else {
-  mainPageForm.css("width", `calc(100% - ${projLayoutColWidth}px - 2px)`);
-}
 
 
 
