@@ -1,6 +1,25 @@
 /////////////
-///MAIN PAGE SLIDER
+///hamburger
 ////////////////
+$(document).ready(function() {
+  $('#menuToggle').click(function() {
+    $(this).toggleClass('active');
+
+    if ($(this).hasClass('active')) {
+      $('.navigation').css({
+        'transform': 'translateX(0)' // Show the navigation
+      });
+      $('body').addClass('no-scroll'); // Disable scrolling
+    } else {
+      $('.navigation').css({
+        'transform': 'translateX(-100%)' // Hide the navigation
+      });
+      $('body').removeClass('no-scroll'); // Enable scrolling
+    }
+  });
+});
+
+
 
 
 //set height of hero section to 100vh - navigation height to fit the 100vh screen,  and the same for projects inner page
