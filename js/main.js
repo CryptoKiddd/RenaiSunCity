@@ -51,12 +51,12 @@ $(window).on('scroll', function() {
   if (scrolled > scrollTrigger) {
       navOnScroll.css({
           'transform': 'translateY(0px)',
-          'pointer-events': 'enable' // Enable pointer events when visible
+        
       });
   } else {
       navOnScroll.css({
           'transform': 'translateY(-100%)',
-          'pointer-events': 'none' // Disable pointer events when hidden
+        
       });
   }
 });

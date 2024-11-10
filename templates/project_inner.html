@@ -247,76 +247,8 @@
                     </div>
 
                 </div>
-                <div class="item plan-item">
-                    <h2>57 m2 ბინა </h2>
-                    <p>1 m2 ფასი: 800$-დან (თეთრი კარკასი)</p>
-                    <p>პირველადი შენატანი: 20%</p>
-                    <p>0% განვადება: 2026 წლის ბოლომდე</p>
-                    <div class="plan-image">
-
-                        <img class="" src="../assets/plan1.jpg" alt="">
-                    </div>
-                </div>
-                <div class="item plan-item">
-                    <h2>75 m2 ბინა </h2>
-                    <p>1 m2 ფასი: 800$-დან (თეთრი კარკასი)</p>
-                    <p>პირველადი შენატანი: 20%</p>
-                    <p>0% განვადება: 2026 წლის ბოლომდე</p>
-                    <div class="plan-image">
-
-                        <img class="" src="../assets/plan1.jpg" alt="">
-                    </div>
-                </div>
-                <div class="item plan-item">
-                    <h2>60 m2 ბინა </h2>
-                    <p>1 m2 ფასი: 800$-დან (თეთრი კარკასი)</p>
-                    <p>პირველადი შენატანი: 20%</p>
-                    <p>0% განვადება: 2026 წლის ბოლომდე</p>
-                    <div class="plan-image">
-
-                        <img class="" src="../assets/plan1.jpg" alt="">
-                    </div>
-                </div>
-                <div class="item plan-item">
-                    <h2>88 m2 ბინა </h2>
-                    <p>1 m2 ფასი: 800$-დან (თეთრი კარკასი)</p>
-                    <p>პირველადი შენატანი: 20%</p>
-                    <p>0% განვადება: 2026 წლის ბოლომდე</p>
-                    <div class="plan-image">
-
-                        <img class="" src="../assets/plan1.jpg" alt="">
-                    </div>
-                </div>
-                <div class="item plan-item">
-                    <h2>75 m2 ბინა </h2>
-                    <p>1 m2 ფასი: 800$-დან (თეთრი კარკასი)</p>
-                    <p>პირველადი შენატანი: 20%</p>
-                    <p>0% განვადება: 2026 წლის ბოლომდე</p>
-                    <div class="plan-image">
-
-                        <img class="" src="../assets/plan1.jpg" alt="">
-                    </div>
-                </div>
-                <div class="item plan-item">
-                    <h2>57 m2 ბინა </h2>
-                    <p>1 m2 ფასი: 800$-დან (თეთრი კარკასი)</p>
-                    <p>პირველადი შენატანი: 20%</p>
-                    <p>0% განვადება: 2026 წლის ბოლომდე</p>
-                    <div class="plan-image">
-
-                        <img class="" src="../assets/plan1.jpg" alt="">
-                    </div>
-                </div>
-                <div class="item plan-item">
-                    <h2>88 m2 ბინა </h2>
-                    <p>1 m2 ფასი: 800$-დან (თეთრი კარკასი)</p>
-                    <p>პირველადი შენატანი: 20%</p>
-                    <p>0% განვადება: 2026 წლის ბოლომდე</p>
-                    <div class="plan-image">
-
-                        <img class="" src="../assets/plan1.jpg" alt="">
-                    </div>
-                </div>
+               
+             
                
              
             </div>
@@ -632,9 +564,24 @@ let owl = $('#about-us-carousel')
             margin: 10,
             dots: false,
             nav: false,
-            stagePadding: 260,
+            stagePadding: 160,
             responsive: {
-                0: { items: 1 },
+                0: {
+                    items: 1,
+                    stagePadding: 20,  // For screen widths below 450px
+                },
+                450: {
+                    items: 1,
+                    stagePadding: 20,  // For screen widths below 760px but above 450px
+                },
+                768: {
+                    items: 1,
+                    stagePadding: 160,  // Default stagePadding for larger screens
+                },
+                1024: {
+                    items: 1,
+                    stagePadding: 260,  // Default stagePadding for larger screens
+                }
             }
         });
         $('.custom-prev').click(function () {

@@ -334,7 +334,22 @@
             nav: false,
             stagePadding: 260,
             responsive: {
-                0: { items: 1 },
+                0: {
+                    items: 1,
+                    stagePadding: 50,  // For screen widths below 450px
+                },
+                450: {
+                    items: 1,
+                    stagePadding: 60,  // For screen widths below 760px but above 450px
+                },
+                769: {
+                    items: 1,
+                    stagePadding: 160,  // Default stagePadding for larger screens
+                },
+                1024: {
+                    items: 1,
+                    stagePadding: 260,  // Default stagePadding for larger screens
+                }
             }
         });
         $('.custom-prev').click(function () {
